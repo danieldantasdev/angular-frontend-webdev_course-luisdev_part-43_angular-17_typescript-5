@@ -1,0 +1,19 @@
+{{ nome }}
+
+<button (click)="alteraNome()">Alterar Nome!</button>
+
+<br><br>
+
+{{ cidade }}
+
+<br>
+
+<input [disabled]="desabilitaCidadeInput" [type]="typeInput" [(ngModel)]="cidade" placeholder="Digite sua cidade">
+
+<br>
+
+<button (click)="resetCidade()">Reseta Cidade!</button>
+
+<br>
+
+<button (click)="desabilitaCidade()">Desabilita Cidade!</button>
