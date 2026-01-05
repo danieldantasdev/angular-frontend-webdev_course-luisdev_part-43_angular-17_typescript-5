@@ -1,0 +1,56 @@
+<div class="ld-register">
+  <ld-wrapper>
+    <form class="left" (submit)="cadastrar()" [formGroup]="registerForm">
+
+      <h1 class="main-title">
+        <span class="up">Olá!</span>
+        <span class="down">Vamos criar seu cadastro.</span>
+      </h1>
+
+      <div class="radio-buttons">
+        <h3 class="title">Qual o seu perfil?</h3>
+        <div class="buttons">
+          <label class="ld-radio">
+            Dev
+            <input name="role" type="radio">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="ld-radio">
+            Cliente
+            <input name="role" type="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Nome completo</mat-label>
+        <input matInput formControlName="fullName">
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Data de nascimento</mat-label>
+        <input type="date" matInput formControlName="birthdate">
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+
+      <ld-button text="Continuar"></ld-button>
+
+    </form>
+
+    <div class="right">
+      <img class="image" alt="Fundo de decoração com 3 cubos com fundo gradient das cores do arco-iris"
+        src="assets/image/bg-cubes.png">
+    </div>
+  </ld-wrapper>
+</div>
