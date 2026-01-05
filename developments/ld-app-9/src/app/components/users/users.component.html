@@ -1,0 +1,15 @@
+<p>users works!</p>
+
+nomeUser: {{ nomeUser }}
+
+<app-header
+    [nomeEnviado]="nomeUser"
+    (alterarNomeDoPai)="alteraNomeUser($event)"
+></app-header>
+
+
+
+<!-- 
+    Input
+    Output
+ -->
