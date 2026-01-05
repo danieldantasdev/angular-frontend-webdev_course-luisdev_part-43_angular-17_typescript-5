@@ -1,0 +1,68 @@
+// card > button title > highlight
+// CSS NATIVO
+.card {
+    // css do card
+}
+
+.card >.title{
+    // css do title
+}
+
+.card >.title >.highlight{
+    // css do highlight
+}
+
+.card >.button{
+    // css do button
+}
+
+// SCSS
+.card{
+    >.title{
+        >.highlight{
+
+        }
+    }
+
+    >.button{
+
+    }
+}
+
+
+// -----------------------------
+
+// REPONSIVE.SCSS
+
+$tablet-size: 600px;
+
+@mixin for-tablet{
+    @media (min-width: $tablet-size){
+        @content;
+    }
+}
+
+
+// CARD.SCSS
+
+// @import 'responsive.scss';
+
+@include for-tablet {
+    .card {
+        width: 300px;
+    }
+}
+
+
+// -----------------------------
+
+$sizes: 5, 10, 15, 20, 25, 30;
+$directions: 'top', 'left', 'bottom', 'right';
+
+@each $direction in $directions {
+    @each $size in $sizes {
+        .p-#{$direction}-#{$size}{
+            padding-#{$direction}: #{$size}px;
+        }
+    }
+}
